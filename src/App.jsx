@@ -5,7 +5,9 @@ const App = () => {
     return (
         <main>
             <RouterProvider router={router} />
-            <h1 class="text-3xl font-bold underline text-fuchsia-800">Hello world!</h1>
+            <h1 class="text-3xl font-bold underline text-text-primary animate-fade-up">
+                Arlowe & Bean
+            </h1>
         </main>
     );
 };

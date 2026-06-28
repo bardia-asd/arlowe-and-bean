@@ -1,1 +1,78 @@
 @import "tailwindcss";
+
+@theme {
+    /* Backgrounds */
+    --color-bg-primary: #f8f3ed;
+    --color-bg-secondary: #efe4d6;
+    --color-bg-surface: #fffaf4;
+    --color-bg-card: #f5ece0;
+
+    /* Brand */
+    --color-primary: #7b4f35;
+    --color-primary-hover: #6a422b;
+    --color-secondary: #b97a57;
+    --color-accent: #d8a25e;
+
+    /* Text */
+    --color-text-primary: #3b2a1f;
+    --color-text-secondary: #6e5b4b;
+    --color-text-muted: #9b8774;
+    --color-text-inverse: #fffaf4;
+
+    /* Borders */
+    --color-border-light: #e7d7c5;
+    --color-border-medium: #d6c0ab;
+    --color-border-dark: #b4977d;
+
+    /* States */
+    --color-success: #7c9a68;
+    --color-warning: #d89b4a;
+    --color-error: #b85c4d;
+
+    /* Effects */
+    --color-shadow: rgba(84, 54, 33, 0.12);
+    --color-overlay: rgba(59, 42, 31, 0.55);
+
+    /* Decorative */
+    --color-cream: #f6ede2;
+    --color-latte: #e7d2bf;
+    --color-caramel: #c88a5a;
+    --color-mocha: #8b5e3c;
+    --color-espresso: #4a2d1f;
+    --color-cinnamon: #b66a4d;
+    --color-honey: #d9ab58;
+
+    /* Fonts */
+    --font-body: "Inter", sans-serif;
+    --font-heading: "Playfair Display", serif;
+
+    /* Keyframes */
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Animations */
+    --animate-fade-up: fade-up 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+    body {
+        font-family: var(--font-body);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+    }
+}
