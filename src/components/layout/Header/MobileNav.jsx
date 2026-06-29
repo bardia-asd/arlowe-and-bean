@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import Button from "@/components/common/Button";
 
 /**
  * MobileNav
@@ -47,11 +48,9 @@ const MobileNav = ({ menuOpen }) => {
                 </NavLink>
 
                 {/* Primary CTA — pill-shaped button that stands out from the plain text links above */}
-                <NavLink
-                    to="menu"
-                    className="flex items-center justify-center px-5 lg:px-6 py-2.5 bg-primary hover:bg-accent rounded-full text-text-inverse text-sm font-medium uppercase transition-colors duration-75">
+                <Button to="menu" size="small" as={NavLink}>
                     Order Online
-                </NavLink>
+                </Button>
             </div>
         </div>
     );

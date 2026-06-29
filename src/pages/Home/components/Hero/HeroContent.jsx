@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import Button from "@/components/common/Button";
 
 const HeroContent = () => {
     return (
@@ -16,16 +17,10 @@ const HeroContent = () => {
                 mornings and focused afternoons.
             </p>
             <div className="flex flex-col md:flex-row gap-3 sm:gap-4">
-                <Link
-                    to="menu"
-                    className="flex items-center justify-center px-8 py-4 bg-primary hover:bg-accent rounded-full text-text-inverse text-sm font-medium transition-colors duration-75">
-                    View Today's Menu
-                </Link>
-                <Link
-                    to="about-us"
-                    className="flex items-center justify-center px-8 py-4 border border-border-medium bg-transparent hover:bg-cream rounded-full text-sm font-medium transition-colors duration-75">
+                <Button to="menu" as={Link}>View Today's Menu</Button>
+                <Button to="about-us" variant="outline" as={Link}>
                     Explore the Space
-                </Link>
+                </Button>
             </div>
         </div>
     );
