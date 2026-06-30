@@ -23,7 +23,7 @@ const CafeMap = () => {
          * The wrapper controls the map dimensions, clipping,
          * border radius, and visual styling.
          */
-        <div className="overflow-hidden rounded-2xl border border-border-light bg-white shadow-sm aspect-[4/3] lg:aspect-video">
+        <div className="relative z-0 overflow-hidden rounded-2xl border border-border-light bg-white shadow-sm aspect-[4/3] lg:aspect-video">
             <MapContainer
                 center={[51.505, -0.09]} // Initial map center coordinates
                 zoom={13} // Default zoom level
