@@ -1,6 +1,7 @@
-import AboutSnapshot from "./components/AboutSnapshot";
 import HeroSection from "./components/Hero";
 import PopularMenu from "./components/PopularMenu";
+import AboutSnapshot from "./components/AboutSnapshot";
+import FindUs from "./components/FindUs";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <HeroSection />
             <PopularMenu />
             <AboutSnapshot />
+            <FindUs />
         </>
     );
 };
