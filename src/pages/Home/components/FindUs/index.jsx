@@ -1,3 +1,4 @@
+import CafeMap from "@/components/common/CafeMap";
 import FindUsContent from "./FindUsContent";
 
 const FindUs = () => {
@@ -6,6 +7,7 @@ const FindUs = () => {
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-20 items-start">
                     <FindUsContent />
+                    <CafeMap />
                 </div>
             </div>
         </section>
