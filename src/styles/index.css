@@ -46,20 +46,19 @@
     --font-body: "Inter", sans-serif;
     --font-heading: "Playfair Display", serif;
 
-    /* Keyframes */
     @keyframes fade-up {
-        from {
+        0% {
             opacity: 0;
-            transform: translateY(8px);
+            transform: translate3d(0, 24px, 0);
         }
-        to {
+
+        100% {
             opacity: 1;
-            transform: translateY(0);
+            transform: translate3d(0, 0, 0);
         }
     }
 
-    /* Animations */
-    --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    --animate-fade-up: fade-up 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @layer base {
