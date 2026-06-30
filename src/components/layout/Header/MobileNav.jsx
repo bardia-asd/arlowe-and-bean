@@ -48,7 +48,11 @@ const MobileNav = ({ menuOpen }) => {
                 </NavLink>
 
                 {/* Primary CTA — pill-shaped button that stands out from the plain text links above */}
-                <Button to="menu" size="small" as={NavLink}>
+                <Button
+                    to="menu"
+                    size="small"
+                    as={NavLink}
+                    className="uppercase">
                     Order Online
                 </Button>
             </div>

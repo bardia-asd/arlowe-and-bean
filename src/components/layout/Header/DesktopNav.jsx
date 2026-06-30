@@ -43,7 +43,11 @@ const DesktopNav = () => {
                 </NavLink>
 
                 {/* Primary CTA — static pill-button styles, no active state needed */}
-                <Button to="menu" size="small" as={NavLink}>
+                <Button
+                    to="menu"
+                    size="small"
+                    as={NavLink}
+                    className="uppercase">
                     Order Online
                 </Button>
             </div>
