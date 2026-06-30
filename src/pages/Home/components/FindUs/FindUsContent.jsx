@@ -55,7 +55,11 @@ const FindUsContent = () => {
                 </div>
 
                 {/* External navigation CTA */}
-                <Button variant="outline" as={Link} className="w-fit">
+                <Button
+                    to="visit"
+                    variant="outline"
+                    as={Link}
+                    className="w-fit">
                     Get Directions
                 </Button>
             </div>
