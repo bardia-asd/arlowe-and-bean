@@ -1,5 +1,11 @@
+import SectionHeader from "./components/SectionHeader";
+
 const Menu = () => {
-    return <div>Menu</div>;
+    return (
+        <>
+            <SectionHeader />
+        </>
+    );
 };
 
 export default Menu;
