@@ -1,9 +1,9 @@
-import InputField from "@/components/common/InputField";
+import Textarea from "@/components/common/Textarea";
 
 const Visit = () => {
     return (
         <div className="w-96 mx-auto py-10">
-            <InputField label="Name" />
+            <Textarea label="Message" />
         </div>
     );
 };
