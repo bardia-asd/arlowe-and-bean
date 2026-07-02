@@ -18,7 +18,7 @@ const Contact = () => {
     return (
         <div className="container mx-auto px-4 sm:px-6">
             {/* Page introduction */}
-            <section className="px-4 sm:px-6 pt-12 sm:pt-16 pb-8 sm:pb-10 md:pt-24 md:pb-16">
+            <section className="pt-12 sm:pt-16 pb-8 sm:pb-10 md:pt-24 md:pb-16">
                 <PageHeader
                     subtitle="Visit"
                     title="Find us in "
@@ -29,7 +29,7 @@ const Contact = () => {
             </section>
 
             {/* Interactive cafe location map */}
-            <section className="px-4 sm:px-6 pb-10 sm:pb-12">
+            <section className="pb-10 sm:pb-12">
                 <CafeMap />
             </section>
 
