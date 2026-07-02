@@ -131,7 +131,7 @@ const AboutUs = () => {
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <Button to="/visit" as={Link} className="w-fit mx-auto">
+                    <Button to="/contact" as={Link} className="w-fit mx-auto">
                         Come Visit Us
                     </Button>
                 </div>

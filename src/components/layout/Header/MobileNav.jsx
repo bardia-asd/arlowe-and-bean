@@ -42,7 +42,7 @@ const MobileNav = ({ menuOpen }) => {
                     Our Story
                 </NavLink>
                 <NavLink
-                    to="visit"
+                    to="contact"
                     className="py-3 text-sm font-medium uppercase hover:text-accent transition-colors duration-75">
                     Visit
                 </NavLink>

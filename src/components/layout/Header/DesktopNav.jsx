@@ -38,7 +38,7 @@ const DesktopNav = () => {
                 <NavLink to="about-us" className={navLinkClass}>
                     Our Story
                 </NavLink>
-                <NavLink to="visit" className={navLinkClass}>
+                <NavLink to="contact" className={navLinkClass}>
                     Visit
                 </NavLink>
 
