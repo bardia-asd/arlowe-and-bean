@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import ProductCard from "@/components/common/ProductCard";
 import ProductCardSkeleton from "@/components/common/ProductCard/ProductCardSkeleton";
 
@@ -38,6 +39,19 @@ const MenuItems = ({ items, loading }) => {
             </div>
         </section>
     );
+};
+
+MenuItems.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+            image_url: PropTypes.string,
+            name: PropTypes.string,
+            price: PropTypes.number,
+            description: PropTypes.string,
+        }),
+    ),
+    loading: PropTypes.bool,
 };
 
 export default MenuItems;
