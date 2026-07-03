@@ -1,5 +1,6 @@
 import useFetch from "@/hooks/useFetch";
 import ProductCard from "@/components/common/ProductCard";
+import ProductCardSkeleton from "@/components/common/ProductCard/ProductCardSkeleton";
 
 /**
  * PopularGrid
@@ -30,22 +31,7 @@ const PopularGrid = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-10 sm:gap-y-12">
                 {/* Array.from({ length: 3 }) generates 3 placeholder slots — no real data needed */}
                 {Array.from({ length: 3 }).map((_, i) => (
-                    <div key={i} className="animate-pulse">
-                        {/* Mirrors the ProductCard image block */}
-                        <div className="overflow-hidden rounded-2xl aspect-square mb-6 bg-latte/60" />
-
-                        {/* Mirrors the name + price row */}
-                        <div className="flex items-center justify-between gap-4 mb-2">
-                            <div className="h-7 w-40 rounded-md bg-latte/60" />
-                            <div className="h-5 w-16 rounded-md bg-latte/60 shrink-0" />
-                        </div>
-
-                        {/* Mirrors the two-line description */}
-                        <div className="space-y-2">
-                            <div className="h-4 w-full rounded-md bg-latte/60" />
-                            <div className="h-4 w-3/4 rounded-md bg-latte/60" />
-                        </div>
-                    </div>
+                    <ProductCardSkeleton key={i} />
                 ))}
             </div>
         );
