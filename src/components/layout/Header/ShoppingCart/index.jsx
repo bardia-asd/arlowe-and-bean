@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { ShoppingBag, X } from "lucide-react";
 import Button from "@/components/common/Button";
+import ShoppingCartBody from "./ShoppingCartBody";
 
 /**
  * ShoppingCart
@@ -76,6 +77,7 @@ const ShoppingCart = () => {
                         </header>
                         {/* TODOS Cart items will be rendered here later */}
                         {/* CartBody */}
+                        <ShoppingCartBody />
 
                         {/* Order summary and checkout */}
                         <footer className="px-5 sm:px-6 py-4 sm:py-5 space-y-3 sm:space-y-4 shrink-0 border-t border-border-light">
