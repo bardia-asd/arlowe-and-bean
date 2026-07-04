@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import ShoppingCart from "./ShoppingCart";
 
 /**
  * Header
@@ -13,10 +14,9 @@ import MobileNav from "./MobileNav";
  * The mobile menu is closed automatically whenever the route changes so that
  * navigating to a new page always leaves the drawer in a collapsed state.
  *
- * @param {object} props - Component props (currently unused; reserved for future use).
  * @returns {JSX.Element} The rendered <header> element.
  */
-const Header = (props) => {
+const Header = () => {
     // Tracks whether the mobile navigation drawer is open or closed.
     const [open, setOpen] = useState(false);
 
@@ -50,11 +50,13 @@ const Header = (props) => {
                     {/* Desktop navigation — hidden on small screens via DesktopNav's own styles */}
                     <DesktopNav />
 
+                    <ShoppingCart />
+
                     {/* Hamburger / close toggle — only rendered on screens narrower than `md` */}
                     <div className="md:hidden">
                         <button
+                            className="flex items-center justify-center size-9 p-2 hover:text-accent transition-colors"
                             type="button"
-                            className="p-2"
                             onClick={() => setOpen((prev) => !prev)}
                             // aria-label provides a descriptive name for screen readers
                             // since the button contains only an icon with no visible text.
