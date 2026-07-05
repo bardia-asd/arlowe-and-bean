@@ -43,6 +43,7 @@ const PopularGrid = () => {
             {popularMenu.map((menu) => (
                 <ProductCard
                     key={menu.id}
+                    id={menu.id}
                     src={menu.image_url}
                     name={menu.name}
                     price={menu.price}

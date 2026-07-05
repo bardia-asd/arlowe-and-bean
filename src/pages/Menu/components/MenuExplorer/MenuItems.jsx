@@ -29,6 +29,7 @@ const MenuItems = ({ items, loading }) => {
                       items.map((item) => (
                           <ProductCard
                               key={item.id}
+                              id={item.id}
                               src={item.image_url}
                               alt={item.name}
                               name={item.name}

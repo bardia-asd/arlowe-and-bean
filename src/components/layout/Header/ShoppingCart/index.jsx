@@ -3,20 +3,26 @@ import { createPortal } from "react-dom";
 import { ShoppingBag, X } from "lucide-react";
 import Button from "@/components/common/Button";
 import ShoppingCartBody from "./ShoppingCartBody";
+import { useCart } from "@/context/CartContext";
 
 /**
  * ShoppingCart
  *
  * Slide-out shopping cart drawer rendered through a React portal.
- * Locks page scrolling while open and provides an overlay backdrop
- * that dismisses the drawer when clicked.
  *
- * Uses translate transforms and opacity transitions for smooth
- * open/close animations without unmounting the component.
+ * Features:
+ * - Locks body scroll when open
+ * - Uses overlay backdrop for dismissal
+ * - Smooth open/close animation via translate + opacity
+ * - Displays dynamic cart summary (items count + subtotal)
+ * - Handles checkout action with cart reset
  */
 const ShoppingCart = () => {
     // Tracks whether the shopping cart drawer is open.
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
+
+    // Cart data and actions from global context
+    const { itemCount, subTotal, clearCart } = useCart();
 
     /**
      * Prevent background scrolling while the cart is visible.
@@ -30,6 +36,21 @@ const ShoppingCart = () => {
         }
         return () => (document.body.style.overflow = "");
     }, [open]);
+
+    /**
+     * Handle checkout action
+     *
+     * Clears cart, closes drawer, and shows confirmation message.
+     * In a real app, this would trigger payment / order API call.
+     */
+    const handleCheckout = () => {
+        clearCart();
+        setOpen(false);
+
+        alert(
+            "Thank you. Your order has been received and will be prepared shortly.",
+        );
+    };
 
     return (
         <div>
@@ -45,7 +66,7 @@ const ShoppingCart = () => {
                 <ShoppingBag size={24} aria-hidden="true" />
                 {/* Item count badge */}
                 <span className="absolute -top-0.5 -right-0.5 inline-flex items-center justify-center size-5 text-xs bg-primary rounded-full text-text-inverse">
-                    3
+                    {itemCount}
                 </span>
             </button>
 
@@ -83,13 +104,14 @@ const ShoppingCart = () => {
                         <footer className="px-5 sm:px-6 py-4 sm:py-5 space-y-3 sm:space-y-4 shrink-0 border-t border-border-light">
                             <div className="flex items-center justify-between">
                                 <p className="text-text-primary uppercase tracking-widest text-sm">
-                                    Subtotal(8 items)
+                                    Subtotal({itemCount} items)
                                 </p>
-                                <p className="font-medium">$52.00</p>
+                                <p className="font-medium">${subTotal}</p>
                             </div>
                             <Button
                                 className="w-full"
-                                aria-label="Proceed to checkout">
+                                aria-label="Proceed to checkout"
+                                onClick={handleCheckout}>
                                 Checkout
                             </Button>
                         </footer>
