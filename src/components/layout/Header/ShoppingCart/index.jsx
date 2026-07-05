@@ -83,7 +83,7 @@ const ShoppingCart = () => {
                     <aside
                         id="shopping-cart"
                         aria-label="Shopping cart"
-                        className={`fixed top-0 right-0 flex flex-col w-full sm:w-96 h-screen bg-bg-surface border-l border-border-light shadow-sm transition-transform duration-200 z-60 ${open ? "translate-x-0" : "translate-x-full"}`}>
+                        className={`fixed top-0 right-0 flex flex-col w-full sm:w-96 h-dvh bg-bg-surface border-l border-border-light shadow-sm transition-transform duration-200 z-60 ${open ? "translate-x-0" : "translate-x-full"}`}>
                         {/* Drawer header */}
                         <header className="shrink-0 flex items-center justify-between border-b border-border-light px-5 sm:px-6 h-16 sm:h-20">
                             <h2 className="text-xl sm:text-2xl">Your Order</h2>
@@ -101,7 +101,7 @@ const ShoppingCart = () => {
                         <ShoppingCartBody />
 
                         {/* Order summary and checkout */}
-                        <footer className="px-5 sm:px-6 py-4 sm:py-5 space-y-3 sm:space-y-4 shrink-0 border-t border-border-light">
+                        <footer className="px-5 sm:px-6 py-4 sm:py-5 space-y-3 sm:space-y-4 shrink-0 border-t border-border-light pb-[max(1rem,env(safe-area-inset-bottom))]">
                             <div className="flex items-center justify-between">
                                 <p className="text-text-primary uppercase tracking-widest text-sm">
                                     Subtotal({itemCount} items)
