@@ -1,6 +1,7 @@
 // import useCart from "@/hooks/useCart";
 import { useCart } from "@/context/CartContext";
 import ShoppingCartItem from "./ShoppingCartItem";
+import EmptyCart from "./EmptyCart";
 
 /**
  * ShoppingCartBody
@@ -24,11 +25,7 @@ const ShoppingCartBody = () => {
          * inside the cart drawer without pushing footer content.
          */
         <ul className="flex-1 flex flex-col min-h-0 px-5 sm:px-6 py-2 overflow-y-auto divide-y divide-border-light">
-            {cart.length === 0 ? (
-                <p className="text-sm text-espresso/60 py-6 text-center">
-                    Your cart is empty
-                </p>
-            ) : (
+            {cart.length > 0 ? (
                 cart.map((item) => (
                     <ShoppingCartItem
                         key={item.id}
@@ -42,6 +39,8 @@ const ShoppingCartBody = () => {
                         onDecrease={() => decreaseQty(item.id)}
                     />
                 ))
+            ) : (
+                <EmptyCart />
             )}
         </ul>
     );
